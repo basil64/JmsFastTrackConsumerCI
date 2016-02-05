@@ -28,6 +28,8 @@ public class Pipe {
         }
     }
 
+    // Function returns correlationId
+    //
     public String get() {
         DelayedElement delayedElement;
         try {
