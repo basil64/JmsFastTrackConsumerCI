@@ -8,6 +8,7 @@ import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.DelayQueue;
 import java.util.concurrent.TimeUnit;
 
+// What a beautiful code
 @Component
 public class Pipe {
     Logger logger = LoggerFactory.getLogger(Pipe.class);
