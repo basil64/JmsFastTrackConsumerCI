@@ -8,7 +8,7 @@ import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.DelayQueue;
 import java.util.concurrent.TimeUnit;
 
-// What a beautiful code
+// What a beautiful code was written
 // Very important change
 @Component
 public class Pipe {
