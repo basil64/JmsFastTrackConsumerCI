@@ -6,7 +6,6 @@ import org.springframework.stereotype.Component;
 
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.DelayQueue;
-import java.util.concurrent.LinkedBlockingDeque;
 import java.util.concurrent.TimeUnit;
 
 @Component
@@ -30,7 +29,6 @@ public class Pipe {
     public String get() {
         DelayedElement delayedElement = null;
         try {
-            //Thread.sleep(SLEEP_TIME);
             delayedElement = queue.take();
             logger.info("[{}] delay [{}] timeout [{}]", delayedElement.getCorrelationId(), delayedElement.getDelay(TimeUnit.MILLISECONDS),
                     delayedElement.getTimeOut());
