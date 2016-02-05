@@ -30,6 +30,7 @@ public class Pipe {
     public String get() {
         DelayedElement delayedElement = null;
         try {
+            //Sleep removed 
             //Thread.sleep(SLEEP_TIME);
             delayedElement = queue.take();
             logger.info("[{}] delay [{}] timeout [{}]", delayedElement.getCorrelationId(), delayedElement.getDelay(TimeUnit.MILLISECONDS),
