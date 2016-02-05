@@ -29,15 +29,16 @@ public class Pipe {
     }
 
     public String get() {
-        DelayedElement delayedElement = null;
+        DelayedElement delayedElement;
         try {
             delayedElement = queue.take();
             logger.info("[{}] delay [{}] timeout [{}]", delayedElement.getCorrelationId(), delayedElement.getDelay(TimeUnit.MILLISECONDS),
                     delayedElement.getTimeOut());
+            return delayedElement.getCorrelationId();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        return delayedElement.getCorrelationId();
+        return "";
     }
 
     public int getSize() {
